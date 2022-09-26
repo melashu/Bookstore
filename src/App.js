@@ -1,6 +1,6 @@
-import { Route, Routes, Link } from "react-router-dom";
-import Book from "./components/Book";
-import Categorie from "./components/Categorie";
+import { Route, Routes, Link } from 'react-router-dom';
+import Book from './components/Book';
+import Categorie from './components/Categorie';
 
 function App() {
   return (
