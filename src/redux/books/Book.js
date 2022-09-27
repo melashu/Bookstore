@@ -3,7 +3,13 @@ export const bookActionCreator = (type, book) => ({
   book,
 });
 
-const bookReducer = (state = [], action) => {
+const bookReducer = (
+  state = [
+    { title: 'Rich dad poor dad', author: 'Ropert K', id: 0 },
+    { title: 'Think and grow rich', author: 'Napolion H', id: 1 },
+  ],
+  action,
+) => {
   switch (action.type) {
     case 'ADD_BOOK':
       return [...state, action.book];
