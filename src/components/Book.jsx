@@ -10,7 +10,6 @@ import {
 const Book = () => {
   const bookList = useSelector(getState);
   const dispatch = useDispatch();
-  console.log(bookList);
   useEffect(() => {
     dispatch(fetchBookAsyncThank());
   }, [dispatch]);
