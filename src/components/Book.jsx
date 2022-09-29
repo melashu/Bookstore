@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AddBook from './AddBook';
-import { bookActionCreator } from '../redux/books/Book';
+import {
+  fetchBookAsyncThank,
+  getState,
+  removeBookAsyncThunk,
+} from '../redux/books/Book';
 
 const Book = () => {
-  const bookList = useSelector((state) => state.book);
+  const bookList = useSelector(getState);
   const dispatch = useDispatch();
-  const REMOVE_BOOK = 'REMOVE_BOOK';
+  console.log(bookList);
+  useEffect(() => {
+    dispatch(fetchBookAsyncThank());
+  }, [dispatch]);
   return (
     <>
       <div className="book-container">
         <ul>
           {bookList.map((book) => (
-            <li key={book.id}>
+            <li key={book.item_id}>
               {book.title}
               {' '}
               and
@@ -21,7 +28,7 @@ const Book = () => {
               <button
                 type="button"
                 onClick={() => {
-                  dispatch(bookActionCreator(REMOVE_BOOK, { id: book.id }));
+                  dispatch(removeBookAsyncThunk(book.item_id));
                 }}
               >
                 Remove
