@@ -9,7 +9,7 @@
 - CSS
 
 ## Live Demo
-# Comming soon
+[Go Live](https://bookstoreapps.netlify.app/)
 
 ## Screenshot 
 Comming soon
