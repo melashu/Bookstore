@@ -13,6 +13,7 @@ const Categorie = () => {
         {catagory}
       </h2>
       <button
+        className="btn-cat"
         type="button"
         onClick={() => {
           dispatch(categorieStatus());
