@@ -11,8 +11,6 @@
 ## Live Demo
 [Go Live](https://bookstoreapps.netlify.app/)
 
-## Screenshot 
-Comming soon
 
 ## Getting Started
 
